@@ -6,7 +6,7 @@
 /*   By: obelkhad <obelkhad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 15:59:50 by obelkhad          #+#    #+#             */
-/*   Updated: 2021/12/22 19:00:21 by obelkhad         ###   ########.fr       */
+/*   Updated: 2021/12/22 19:07:21 by obelkhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	put_string(char	*str)
 {
-	int		i;
+	int	i;
+
 	if (str)
 	{
 		i = 0;
@@ -28,7 +29,7 @@ int	put_string(char	*str)
 	return (6);
 }
 
-int	put_char(char	c)
+int	put_char(char c)
 {
 	write(1, &c, 1);
 	return (1);
@@ -54,7 +55,6 @@ int	put_number_u(unsigned int n)
 		return (put_char(n + '0'));
 }
 
-
 int	putnbr_base(unsigned long nbr, char	*base)
 {
 	if (nbr >= 0 && nbr < 16)
@@ -64,4 +64,3 @@ int	putnbr_base(unsigned long nbr, char	*base)
 	else
 		return (putnbr_base(nbr / 16, base) + putnbr_base(nbr % 16, base));
 }
-
